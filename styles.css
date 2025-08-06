@@ -169,23 +169,30 @@ section {
     max-width: 1400px;
     margin: 0 auto;
 }
-
+/* Estilo para todos los títulos de sección */
 .section-title {
     font-size: 2rem;
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
     padding-bottom: 1rem;
+    color: var(--light-text);
 }
 
-.section-title:after{
+.section-title:after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
+    height: 3px;
     background-color: var(--primary-color);
+}
+
+/* Específico para proyectos si necesitas ajustes */
+.projects .section-title {
+    margin-bottom: 2.5rem; /* Puedes ajustar este valor */
 }
 
 .btn {
