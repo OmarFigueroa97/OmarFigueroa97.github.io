@@ -169,7 +169,7 @@ section {
     max-width: 1400px;
     margin: 0 auto;
 }
-/* Estilo para todos los títulos de sección */
+/* ESTILO UNIFICADO PARA TODOS LOS TÍTULOS */
 .section-title {
     font-size: 2rem;
     margin-bottom: 3rem;
@@ -186,15 +186,11 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
-    height: 3px;
+    height: 3px; /* AÑADE ESTA LÍNEA */
     background-color: var(--primary-color);
 }
 
-/* Específico para proyectos si necesitas ajustes */
-.projects .section-title {
-    margin-bottom: 2.5rem; /* Puedes ajustar este valor */
-}
-
+/* ELIMINA cualquier otra definición de .section-title */
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
