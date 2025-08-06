@@ -37,21 +37,70 @@ ul {
     list-style: none;
 }
 
-.hero-image img {
-    width: 250px; /* Ajusta este valor según necesites */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 50%; /* Opcional: para hacerla circular */
+/* Reemplaza tus estilos actuales de .hero-image y .hero-content con estos: */
 
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 300px; /* Tamaño máximo en desktop */
+    height: auto;
+    border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--primary-color);
     box-shadow: 0 0 25px rgba(108, 99, 255, .5);
     transition: var(--transition);
 }
 
-img {
-    max-width: 50% ;
-    height: auto;
-    display: block;
+/* Media query para tablets */
+@media (max-width: 992px) {
+    .hero-image img {
+        max-width: 250px;
+    }
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-image img {
+        max-width: 200px;
+        margin-top: 20px;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Media query para móviles pequeños */
+@media (max-width: 480px) {
+    .hero-image img {
+        max-width: 180px;
+    }
 }
 
 header{
